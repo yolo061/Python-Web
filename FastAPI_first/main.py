@@ -1,7 +1,11 @@
 from fastapi import FastAPI
+from path_params import register_path_params
 
 # 创建 FastAPI实例
 app = FastAPI()
+
+# 注册路径参数路由
+register_path_params(app)
 
 
 @app.get("/")
