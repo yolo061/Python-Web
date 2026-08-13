@@ -3,6 +3,7 @@ from path_params import register_path_params
 from query_params import register_query_params
 from request_body import register_request_body
 from response_params import register_response
+from error_params import register_error
 
 # 创建 FastAPI实例
 app = FastAPI()
@@ -17,7 +18,10 @@ register_query_params(app)
 register_request_body(app)
 
 # 响应类型设置
-register_response(app)
+# register_response(app)
+
+# 异常响应
+register_error(app)
 @app.get("/")
 # async 表示异步
 async def root():
